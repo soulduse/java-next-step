@@ -1,4 +1,6 @@
-import com.book.soulduse.Calculator;
+package calculator;
+
+import com.book.soulduse.calculator.Calculator;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

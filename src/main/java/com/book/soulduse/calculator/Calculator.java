@@ -1,4 +1,4 @@
-package com.book.soulduse;
+package com.book.soulduse.calculator;
 
 /**
  * Created by developerkhy@gmail.com on 2017. 5. 27.
