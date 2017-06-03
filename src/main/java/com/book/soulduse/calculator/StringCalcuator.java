@@ -13,6 +13,7 @@ import static java.lang.Integer.remainderUnsigned;
  */
 public class StringCalcuator {
 
+    // 리펙토링 전 메소드
     public int splitAndHap(String s) {
         String separateTxt = null;
 
@@ -37,7 +38,7 @@ public class StringCalcuator {
         return hap;
     }
 
-    public String customSplit(String s) {
+    private String customSplit(String s) {
         int idx = s.indexOf("\n");
         return s.substring(2, idx);
     }
@@ -53,7 +54,7 @@ public class StringCalcuator {
     private int[] toInts(String[] values){
         int[] numbers = new int[values.length];
         for(int i=0; i<values.length; i++){
-            numbers[i] = Integer.parseInt(values[i]);
+            numbers[i] = toPositive(values[i]);
         }
         return numbers;
     }
@@ -77,5 +78,13 @@ public class StringCalcuator {
             sum += number;
         }
         return sum;
+    }
+
+    private int toPositive(String value){
+        int number = Integer.parseInt(value);
+        if(number < 0){
+            throw new RuntimeException();
+        }
+        return number;
     }
 }

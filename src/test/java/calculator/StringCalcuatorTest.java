@@ -69,6 +69,6 @@ public class StringCalcuatorTest {
 
     @Test(expected = RuntimeException.class)
     public void add_negative(){
-        
+        cal.add("-1,2,3");
     }
 }
